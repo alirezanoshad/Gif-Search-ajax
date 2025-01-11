@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    background-color: #232425;
+  }
+  button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #a636f6;
+    color: #151d2f;
+    border-radius: 0.5em;
+    font-weight: 500;
+  }
+  .search-container {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: 1em;
+    width: 100%;
+    max-width: 50em;
+    margin: 1em auto;
+    padding: 0.5em;
+  }
+  .search-container input {
+    padding: 1em;
+    border-radius: 0.5em;
+    font-weight: 400;
+  }
+  .resultList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .gifContainer {
+    background-color: #2b304d;
+    display: flex;
+    padding: 1em;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1.5em;
+    border-radius: 1em;
+  }
+  .gifContainer img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  .gifContainer button {
+    margin-top: 1em;
+    padding: 1em 0;
+  }
+  .loader {
+    display: none;
+    height: 15em;
+    width: 15em;
+    border: 3em solid #2b304d;
+    border-radius: 50%;
+    border-top-color: #5e5e5e;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    animation: spin 3s infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .resultList {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gifContainer {
+      margin: 0.7em;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .resultList {
+      grid-template-columns: 1fr;
+    }
+  }
