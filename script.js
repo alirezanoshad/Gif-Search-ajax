@@ -1,3 +1,5 @@
+"use strict";
+
 // generated API Key
 let apiKey = "EJTQ8L7PwqEyvFEQMvCPN4TbHFJsqsBl";
 
@@ -64,12 +66,11 @@ function generateGif() {
           // Append the obtained ID to default URL
           let copyLink = `https://media4.giphy.com/media/${gif.id}/giphy.mp4`;
           // Copy text inside the text field
-          navigator.clipboard.writeText(copyLink).then(() => {
-            Swal.fire({
-              title: "Copied!",
-              icon: `success ${xhr.status}`,
-              draggable: true,
-            });
+          navigator.clipboard.writeText(copyLink);
+          Swal.fire({
+            title: "Copied!",
+            icon: "success",
+            draggable: true,
           });
         };
         gifContainer.append(copyBtn);
