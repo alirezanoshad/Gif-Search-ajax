@@ -1,7 +1,7 @@
 "use strict";
 
 // generated API Key
-let apiKey = "EJTQ8L7PwqEyvFEQMvCPN4TbHFJsqsBl";
+let apiKey = "jH6uoqBtYSapxznEeShB2bt7GjfJexrw";
 
 //// html refrences
 let submitBtn = document.getElementById("submit-btn");
