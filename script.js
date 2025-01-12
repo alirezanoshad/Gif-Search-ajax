@@ -9,15 +9,15 @@ let loader = document.querySelector(".loader");
 let resultList = document.querySelector(".resultList");
 // get search value
 
+// display -12- gifs in the result
+let gifCount = 12;
+
 // main function (sending request to api and displaying gifs)
 function generateGif() {
   // display loader until gifs load
   loader.style.display = "block";
   resultList.style.display = "none";
   let searchInput = document.querySelector("#searchBox").value;
-
-  // display -12- gifs in the result
-  let gifCount = 12;
 
   // API URL ==> including apikey toacces, input to fing relevant gifs, gifcount
   let finalURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${searchInput}&limit=${gifCount}&offset=0&rating=g&lang=en`;
@@ -98,7 +98,7 @@ function generateGif() {
 
 // calling generateGif function on screen load or when user clicks on submit
 submitBtn.addEventListener("click", generateGif);
-// document.addEventListener("DOMContentLoaded", () => {
-//   searchBox.value = "shrek";
-//   generateGif();
-// });
+document.addEventListener("DOMContentLoaded", () => {
+  searchBox.value = "shrek";
+  generateGif();
+});
