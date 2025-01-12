@@ -85,7 +85,7 @@ function generateGif() {
         title: "Oops...",
         text: `Failed to Get GIFs..
         Please try again
-        Error ${xhr.status}
+        Error:: ${xhr.status}
         `,
         footer:
           '<a href="https://media4.giphy.com/media/Q6WPVzFU8LcBWWgQE1/giphy.mp4">Why do I have this issue?</a>',
