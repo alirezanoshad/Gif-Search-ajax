@@ -9,11 +9,14 @@ let loader = document.querySelector(".loader");
 let resultList = document.querySelector(".resultList");
 // get search value
 
-// display -12- gifs in the result
+// display -12- gifs in the result(default number is 12)
 let gifCount = 12;
 
 // main function (sending request to api and displaying gifs)
 function generateGif() {
+  // display  gifs in the result
+
+
   // display loader until gifs load
   loader.style.display = "block";
   resultList.style.display = "none";
@@ -55,6 +58,7 @@ function generateGif() {
           if (gifCount === 0) {
             loader.style.display = "none";
             resultList.style.display = "grid";
+            gifCount = 12
           }
         };
         gifContainer.append(gifImg);
