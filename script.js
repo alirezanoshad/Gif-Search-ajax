@@ -1,7 +1,7 @@
 "use strict";
 
 // generated API Key
-let apiKey = "jH6uoqBtYSapxznEeShB2bt7GjfJexrw";
+let apiKey = "0qLv40ij7elQz4EWUKJAYtSK357JELec";
 
 //// html refrences
 let submitBtn = document.getElementById("submit-btn");
@@ -15,7 +15,6 @@ let gifCount = 12;
 // main function (sending request to api and displaying gifs)
 function generateGif() {
   // display  gifs in the result
-
 
   // display loader until gifs load
   loader.style.display = "block";
@@ -58,7 +57,7 @@ function generateGif() {
           if (gifCount === 0) {
             loader.style.display = "none";
             resultList.style.display = "grid";
-            gifCount = 12
+            gifCount = 12;
           }
         };
         gifContainer.append(gifImg);
